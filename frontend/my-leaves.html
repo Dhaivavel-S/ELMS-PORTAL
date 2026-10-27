@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Leaves - ELMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-brand">ELMS Portal</div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="apply-leave.html">Apply for Leave</a></li>
+                <li><a href="my-leaves.html" class="active">My Leaves</a></li>
+                <li><a href="leave-history.html">Leave History</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+            <button onclick="logout()" class="btn-primary" style="background:#ef4444;">Logout</button>
+        </aside>
+        <main class="main-content">
+            <div class="glass-card">
+                <h2>My Leave Requests</h2>
+                <div class="table-responsive">
+                    <table id="myLeavesTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Type</th>
+                                <th>Start</th>
+                                <th>End</th>
+                                <th>Days</th>
+                                <th>Reason</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="myLeavesBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/auth.js"></script>
+    <script src="js/leave.js"></script>
+</body>
+</html>

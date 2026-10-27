@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard - ELMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-brand">ELMS Admin</div>
+            <ul class="nav-links">
+                <li><a href="admin-dashboard.html" class="active">Overview</a></li>
+                <li><a href="manage-leaves.html">Manage Leaves</a></li>
+                <li><a href="employees.html">Employees</a></li>
+            </ul>
+            <button onclick="logout()" class="btn-primary" style="background:#ef4444;">Logout</button>
+        </aside>
+        <main class="main-content">
+            <div class="welcome-banner">
+                <h1>Admin Command Center</h1>
+                <p>Monitor system usage, approval queues, and staff status.</p>
+            </div>
+            
+            <div class="dashboard-grid" id="adminStatsGrid">
+                <div class="glass-card stat-card">
+                    <h3>Total Employees</h3>
+                    <div class="value" id="adminTotalEmp">0</div>
+                </div>
+                <div class="glass-card stat-card">
+                    <h3>Pending Applications</h3>
+                    <div class="value" style="color:var(--status-pending);" id="adminPendingLeaves">0</div>
+                </div>
+                <div class="glass-card stat-card">
+                    <h3>Approved Leaves</h3>
+                    <div class="value" style="color:var(--status-approved);" id="adminApprovedLeaves">0</div>
+                </div>
+                <div class="glass-card stat-card">
+                    <h3>Rejected Leaves</h3>
+                    <div class="value" style="color:var(--status-rejected);" id="adminRejectedLeaves">0</div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/auth.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

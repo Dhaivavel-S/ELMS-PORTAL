@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Profile - ELMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-brand">ELMS Portal</div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="apply-leave.html">Apply for Leave</a></li>
+                <li><a href="my-leaves.html">My Leaves</a></li>
+                <li><a href="leave-history.html">Leave History</a></li>
+                <li><a href="profile.html" class="active">Profile</a></li>
+            </ul>
+            <button onclick="logout()" class="btn-primary" style="background:#ef4444;">Logout</button>
+        </aside>
+        <main class="main-content">
+            <div class="glass-card" style="max-width: 500px; margin: 0 auto;">
+                <h2>Employee Profile</h2>
+                <div style="margin-top: 20px; line-height: 2;">
+                    <p><strong>Full Name:</strong> <span id="profName"></span></p>
+                    <p><strong>Employee ID:</strong> <span id="profEmpId"></span></p>
+                    <p><strong>Email:</strong> <span id="profEmail"></span></p>
+                    <p><strong>Department:</strong> <span id="profDept"></span></p>
+                    <p><strong>Designation:</strong> <span id="profDesig"></span></p>
+                    <p><strong>Role:</strong> <span id="profRole"></span></p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/auth.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

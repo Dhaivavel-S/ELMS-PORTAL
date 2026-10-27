@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Leaves - ELMS Admin</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-brand">ELMS Admin</div>
+            <ul class="nav-links">
+                <li><a href="admin-dashboard.html">Overview</a></li>
+                <li><a href="manage-leaves.html" class="active">Manage Leaves</a></li>
+                <li><a href="employees.html">Employees</a></li>
+            </ul>
+            <button onclick="logout()" class="btn-primary" style="background:#ef4444;">Logout</button>
+        </aside>
+        <main class="main-content">
+            <div class="glass-card">
+                <h2>Manage Leave Requests</h2>
+                <div class="table-responsive">
+                    <table id="manageLeavesTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Employee</th>
+                                <th>Leave Type</th>
+                                <th>Dates</th>
+                                <th>Days</th>
+                                <th>Reason</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="manageLeavesBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/auth.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

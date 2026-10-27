@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Dashboard - ELMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-brand">ELMS Portal</div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="apply-leave.html">Apply for Leave</a></li>
+                <li><a href="my-leaves.html">My Leaves</a></li>
+                <li><a href="leave-history.html">Leave History</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+            <button onclick="logout()" class="btn-primary" style="background:#ef4444;">Logout</button>
+        </aside>
+        <main class="main-content">
+            <div class="welcome-banner">
+                <h1>Welcome, <span id="userName">User</span></h1>
+                <p>Employee ID: <span id="userEmpId">--</span> | Department: <span id="userDept">--</span></p>
+            </div>
+            
+            <div class="dashboard-grid">
+                <div class="glass-card stat-card">
+                    <h3>Total Requests</h3>
+                    <div class="value" id="totalLeaves">0</div>
+                </div>
+                <div class="glass-card stat-card">
+                    <h3>Pending</h3>
+                    <div class="value" style="color:var(--status-pending);" id="pendingLeaves">0</div>
+                </div>
+                <div class="glass-card stat-card">
+                    <h3>Approved</h3>
+                    <div class="value" style="color:var(--status-approved);" id="approvedLeaves">0</div>
+                </div>
+                <div class="glass-card stat-card">
+                    <h3>Rejected</h3>
+                    <div class="value" style="color:var(--status-rejected);" id="rejectedLeaves">0</div>
+                </div>
+                <div class="glass-card stat-card">
+                    <h3>Remaining Balance</h3>
+                    <div class="value" style="color:var(--accent-cyan);" id="remainingBalance">0</div>
+                </div>
+            </div>
+
+            <div class="glass-card">
+                <h2>Recent Applications</h2>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Req ID</th>
+                                <th>Type</th>
+                                <th>Dates</th>
+                                <th>Days</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="recentLeavesBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
